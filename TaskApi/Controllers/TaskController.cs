@@ -31,8 +31,8 @@ public class TasksController (TaskService _service): ControllerBase
     public IActionResult Complete(int id)
     {
         var result = _service.Complete(id);
-        if (!result.Payload)
-            return NotFound();
+        if (result.Status ==404)
+            return NotFound(result);
 
         return Ok(result);
     }

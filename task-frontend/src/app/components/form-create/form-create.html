@@ -1,11 +1,13 @@
-<form class="example-form" [formGroup]="formCount">
+<form class="example-form" [formGroup]="formCount" (ngSubmit)="OnClicCreate()">
   <mat-form-field class="example-full-width">
     <mat-label>Título</mat-label>
     <input matInput placeholder="Título" formControlName="title">
-    @if(!formCount.valid)
-    {
-        <mat-error>Ingresar título valido</mat-error>
+    @if(formCount.get('title')?.invalid && formCount.get('title')?.touched) {
+        <mat-error>Ingresar título válido (mínimo 4 caracteres)</mat-error>
     }
   </mat-form-field>
-  <button matButton="filled" (click)="OnClicCreate()">Basic</button>
+
+  <button mat-flat-button color="primary" type="submit" [disabled]="formCount.invalid">
+    Crear Tarea
+  </button>
 </form>

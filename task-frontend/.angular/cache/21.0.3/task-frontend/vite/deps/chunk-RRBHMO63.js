@@ -1,28 +1,29 @@
 import {
-  _CdkPrivateStyleLoader
-} from "./chunk-FHSIJO76.js";
+  _getEventTarget,
+  _getFocusedElementPierceShadowDom,
+  _getShadowRoot,
+  normalizePassiveListenerOptions
+} from "./chunk-KILR7VXN.js";
 import {
   coerceArray
-} from "./chunk-ONF4LMPL.js";
+} from "./chunk-AIEYJCOW.js";
+import {
+  _VisuallyHiddenLoader
+} from "./chunk-U2YXT22R.js";
+import {
+  _CdkPrivateStyleLoader
+} from "./chunk-FHSIJO76.js";
 import {
   coerceElement,
   coerceNumberProperty
 } from "./chunk-F5RYWWLU.js";
 import {
-  _getEventTarget,
-  _getFocusedElementPierceShadowDom,
-  _getShadowRoot,
-  normalizePassiveListenerOptions
-} from "./chunk-QLV5VEYR.js";
-import {
   Platform
-} from "./chunk-Y6GQGCUT.js";
+} from "./chunk-Q7NPHGMX.js";
 import {
   ANIMATION_MODULE_TYPE,
   APP_ID,
   CSP_NONCE,
-  ChangeDetectionStrategy,
-  Component,
   DOCUMENT,
   Directive,
   ElementRef,
@@ -36,13 +37,11 @@ import {
   Output,
   QueryList,
   RendererFactory2,
-  ViewEncapsulation,
   afterNextRender,
   booleanAttribute,
   inject,
   setClassMetadata,
   ɵɵNgOnChangesFeature,
-  ɵɵdefineComponent,
   ɵɵdefineDirective,
   ɵɵdefineInjectable,
   ɵɵdefineInjector,
@@ -68,6 +67,26 @@ import {
   takeUntil,
   tap
 } from "./chunk-PJVWDKLX.js";
+
+// node_modules/@angular/cdk/fesm2022/_keycodes-chunk.mjs
+var SHIFT = 16;
+var CONTROL = 17;
+var ALT = 18;
+var ESCAPE = 27;
+var ZERO = 48;
+var NINE = 57;
+var A = 65;
+var Z = 90;
+var META = 91;
+var MAC_META = 224;
+
+// node_modules/@angular/cdk/fesm2022/keycodes.mjs
+function hasModifierKey(event, ...modifiers) {
+  if (modifiers.length) {
+    return modifiers.some((modifier) => event[modifier]);
+  }
+  return event.altKey || event.shiftKey || event.ctrlKey || event.metaKey;
+}
 
 // node_modules/@angular/cdk/fesm2022/observers.mjs
 function shouldIgnoreRecord(record) {
@@ -298,38 +317,6 @@ var ObserversModule = class _ObserversModule {
   }], null, null);
 })();
 
-// node_modules/@angular/cdk/fesm2022/_id-generator-chunk.mjs
-var counters = {};
-var _IdGenerator = class __IdGenerator {
-  _appId = inject(APP_ID);
-  static _infix = `a${Math.floor(Math.random() * 1e5).toString()}`;
-  getId(prefix, randomize = false) {
-    if (this._appId !== "ng") {
-      prefix += this._appId;
-    }
-    if (!counters.hasOwnProperty(prefix)) {
-      counters[prefix] = 0;
-    }
-    return `${prefix}${randomize ? __IdGenerator._infix + "-" : ""}${counters[prefix]++}`;
-  }
-  static ɵfac = function _IdGenerator_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || __IdGenerator)();
-  };
-  static ɵprov = ɵɵdefineInjectable({
-    token: __IdGenerator,
-    factory: __IdGenerator.ɵfac,
-    providedIn: "root"
-  });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(_IdGenerator, [{
-    type: Injectable,
-    args: [{
-      providedIn: "root"
-    }]
-  }], null, null);
-})();
-
 // node_modules/@angular/cdk/fesm2022/_fake-event-detection-chunk.mjs
 function isFakeMousedownFromScreenReader(event) {
   return event.buttons === 0 || event.detail === 0;
@@ -338,17 +325,6 @@ function isFakeTouchstartFromScreenReader(event) {
   const touch = event.touches && event.touches[0] || event.changedTouches && event.changedTouches[0];
   return !!touch && touch.identifier === -1 && (touch.radiusX == null || touch.radiusX === 1) && (touch.radiusY == null || touch.radiusY === 1);
 }
-
-// node_modules/@angular/cdk/fesm2022/_keycodes-chunk.mjs
-var SHIFT = 16;
-var CONTROL = 17;
-var ALT = 18;
-var ZERO = 48;
-var NINE = 57;
-var A = 65;
-var Z = 90;
-var META = 91;
-var MAC_META = 224;
 
 // node_modules/@angular/cdk/fesm2022/_focus-monitor-chunk.mjs
 var INPUT_MODALITY_DETECTOR_OPTIONS = new InjectionToken("cdk-input-modality-detector-options");
@@ -726,37 +702,6 @@ var CdkMonitorFocus = class _CdkMonitorFocus {
       type: Output
     }]
   });
-})();
-
-// node_modules/@angular/cdk/fesm2022/_visually-hidden-chunk.mjs
-var _VisuallyHiddenLoader = class __VisuallyHiddenLoader {
-  static ɵfac = function _VisuallyHiddenLoader_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || __VisuallyHiddenLoader)();
-  };
-  static ɵcmp = ɵɵdefineComponent({
-    type: __VisuallyHiddenLoader,
-    selectors: [["ng-component"]],
-    exportAs: ["cdkVisuallyHidden"],
-    decls: 0,
-    vars: 0,
-    template: function _VisuallyHiddenLoader_Template(rf, ctx) {
-    },
-    styles: [".cdk-visually-hidden{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap;outline:0;-webkit-appearance:none;-moz-appearance:none;left:0}[dir=rtl] .cdk-visually-hidden{left:auto;right:0}\n"],
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(_VisuallyHiddenLoader, [{
-    type: Component,
-    args: [{
-      exportAs: "cdkVisuallyHidden",
-      encapsulation: ViewEncapsulation.None,
-      template: "",
-      changeDetection: ChangeDetectionStrategy.OnPush,
-      styles: [".cdk-visually-hidden{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap;outline:0;-webkit-appearance:none;-moz-appearance:none;left:0}[dir=rtl] .cdk-visually-hidden{left:auto;right:0}\n"]
-    }]
-  }], null, null);
 })();
 
 // node_modules/@angular/cdk/fesm2022/_breakpoints-observer-chunk.mjs
@@ -1621,6 +1566,38 @@ var A11yModule = class _A11yModule {
   }], () => [], null);
 })();
 
+// node_modules/@angular/cdk/fesm2022/_id-generator-chunk.mjs
+var counters = {};
+var _IdGenerator = class __IdGenerator {
+  _appId = inject(APP_ID);
+  static _infix = `a${Math.floor(Math.random() * 1e5).toString()}`;
+  getId(prefix, randomize = false) {
+    if (this._appId !== "ng") {
+      prefix += this._appId;
+    }
+    if (!counters.hasOwnProperty(prefix)) {
+      counters[prefix] = 0;
+    }
+    return `${prefix}${randomize ? __IdGenerator._infix + "-" : ""}${counters[prefix]++}`;
+  }
+  static ɵfac = function _IdGenerator_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || __IdGenerator)();
+  };
+  static ɵprov = ɵɵdefineInjectable({
+    token: __IdGenerator,
+    factory: __IdGenerator.ɵfac,
+    providedIn: "root"
+  });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(_IdGenerator, [{
+    type: Injectable,
+    args: [{
+      providedIn: "root"
+    }]
+  }], null, null);
+})();
+
 // node_modules/@angular/cdk/fesm2022/_typeahead-chunk.mjs
 var DEFAULT_TYPEAHEAD_DEBOUNCE_INTERVAL_MS = 200;
 var Typeahead = class {
@@ -2313,11 +2290,15 @@ function _animationsDisabled() {
 }
 
 export {
+  ESCAPE,
+  hasModifierKey,
   isFakeMousedownFromScreenReader,
   isFakeTouchstartFromScreenReader,
   FocusMonitor,
   ObserversModule,
+  A11yModule,
   _IdGenerator,
+  AriaDescriber,
   _animationsDisabled
 };
-//# sourceMappingURL=chunk-Y5KK2AJ5.js.map
+//# sourceMappingURL=chunk-RRBHMO63.js.map

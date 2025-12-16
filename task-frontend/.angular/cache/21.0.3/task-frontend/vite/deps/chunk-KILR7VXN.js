@@ -57,6 +57,11 @@ function _getEventTarget(event) {
   return event.composedPath ? event.composedPath()[0] : event.target;
 }
 
+// node_modules/@angular/cdk/fesm2022/_test-environment-chunk.mjs
+function _isTestEnvironment() {
+  return typeof __karma__ !== "undefined" && !!__karma__ || typeof jasmine !== "undefined" && !!jasmine || typeof jest !== "undefined" && !!jest || typeof Mocha !== "undefined" && !!Mocha;
+}
+
 // node_modules/@angular/cdk/fesm2022/platform.mjs
 var PlatformModule = class _PlatformModule {
   static ɵfac = function PlatformModule_Factory(__ngFactoryType__) {
@@ -92,10 +97,11 @@ function getSupportedInputTypes() {
 }
 
 export {
+  normalizePassiveListenerOptions,
   _getShadowRoot,
   _getFocusedElementPierceShadowDom,
   _getEventTarget,
-  normalizePassiveListenerOptions,
+  _isTestEnvironment,
   getSupportedInputTypes
 };
-//# sourceMappingURL=chunk-QLV5VEYR.js.map
+//# sourceMappingURL=chunk-KILR7VXN.js.map

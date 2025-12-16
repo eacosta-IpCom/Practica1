@@ -58,33 +58,24 @@ public class TaskService
     }
 
     //marca tareas como completadas
-    public GenericResponse <bool> Complete (int id)
-    {
-        GenericResponse <bool> response = new ();
-        try
-        {
-             var task = _tasks.FirstOrDefault(t => t.Id ==id);
-             if (task == null)
-            {
-                response.Status=404;
-            response.message ="No se encontró el registro"; 
-            response.Payload = false;
-            return response;
-            }
-            
-            task.IsCompleted = true;
-            
-            response.Status=200;
-            response.message ="Actualizado con exito"; 
-            response.Payload = true;
-            return response;
-        }
-        catch
-        {
-            response.Status=400;
-            response.message ="No fue posible actualizarlo"; 
-            response.Payload = false;
-            return response;
-        }
+   public GenericResponse<bool> Complete(int id)
+{
+    GenericResponse<bool> response = new();
+    var task = _tasks.FirstOrDefault(t => t.Id == id);
+    
+    if (task == null) {
+        response.Status = 404;
+        response.Payload = false;
+        response.message= "No se encontró el registro";
+        return response;
     }
+
+    // INVERTIR EL ESTADO: Si es true pasa a false, si es false a true
+    task.IsCompleted = !task.IsCompleted; 
+    
+    response.Status = 200;
+    response.Payload = task.IsCompleted; // Devolvemos el nuevo estado
+    response.message="Estado actualizado";
+    return response;
+}
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "y5kGYA6eiKM=",
+  "dgSpecHash": "UUhKZOiv2oY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Eduardo Acosta Mora\\Documents\\Proyectos\\Practica1\\practicaTareas\\TaskApi\\TaskApi.csproj",
+  "projectFilePath": "C:\\Users\\Eduardo Acosta Mora\\Documents\\Proyectos\\Practica1\\TaskApi\\TaskApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Eduardo Acosta Mora\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.22\\microsoft.aspnetcore.openapi.8.0.22.nupkg.sha512",
     "C:\\Users\\Eduardo Acosta Mora\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
