@@ -1,0 +1,11 @@
+<form class="example-form" [formGroup]="formCount">
+  <mat-form-field class="example-full-width">
+    <mat-label>Título</mat-label>
+    <input matInput placeholder="Título" formControlName="title">
+    @if(!formCount.valid)
+    {
+        <mat-error>Ingresar título valido</mat-error>
+    }
+  </mat-form-field>
+  <button matButton="filled" (click)="OnClicCreate()">Basic</button>
+</form>
