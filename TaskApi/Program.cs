@@ -17,7 +17,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
+//comentar para Quitar advertencia  de https
 app.UseHttpsRedirection();
+
 
 app.UseCors(x => x .AllowAnyOrigin() .AllowAnyMethod() .AllowAnyHeader()); //Agregue esto
 app.MapControllers(); //agregue esto
@@ -39,8 +42,8 @@ app.MapGet("/weatherforecast", () =>
         .ToArray();
     return forecast;
 })
-.WithName("GetWeatherForecast")
-.WithOpenApi();
+.WithName("GetWeatherForecast");
+//.WithOpenApi();
 
 app.Run();
 
@@ -48,3 +51,34 @@ record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
 {
     public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 }
+
+
+
+/*
+var builder = WebApplication.CreateBuilder(args);
+
+// 1. Agregar servicios
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+// Registrar tu servicio
+builder.Services.AddSingleton<TaskApi.Services.TaskService>();
+
+var app = builder.Build();
+
+// 2. Configurar el pipeline
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+app.UseAuthorization();
+
+// 3. Mapear controladores - ASEGÚRATE DE NO TENER .WithOpenApi() AQUÍ
+app.MapControllers();
+
+app.Run();
+*/

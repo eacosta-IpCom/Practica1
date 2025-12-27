@@ -2,12 +2,15 @@ import { Injectable } from '@angular/core';
 import { GenericService } from '../GenericService/generic-service';
 import { IGenericResponse } from '../../Interfaces/igeneric-response';
 import { ITask } from '../../Interfaces/itask';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TaskService {
   
+  //private readonly url = environment.apiUrl; //Enviroment
+  private readonly url = environment.urls.urlbase;
   constructor(private genericService: GenericService){}
   public getAll():Promise<IGenericResponse<ITask[]>>
   {

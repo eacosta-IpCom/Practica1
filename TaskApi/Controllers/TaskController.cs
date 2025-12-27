@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+//using System.Runtime.InteropServices.Java;
 using System.Security.Cryptography.X509Certificates;
 using Microsoft.AspNetCore.Mvc;
 using TaskApi.Services;
@@ -12,6 +13,7 @@ public class TasksController (TaskService _service): ControllerBase
 {
     //get: api/task
     [HttpGet ("GetAll")]
+    //[ProducesResponseType(typeof(BaseResponse<TaskItem>), 200)]
     public IActionResult GetAll()
     {
         return Ok(_service.GetAll());
@@ -19,6 +21,7 @@ public class TasksController (TaskService _service): ControllerBase
 
     //post: api/task
     [HttpPost("Create")]
+    //[ProducesResponseType(typeof(BaseResponse<TaskItem>), 200)]
     public IActionResult Create([FromBody] CreateTaskRequest request)
     {
         var task = _service.Create(request.Title);
@@ -28,6 +31,7 @@ public class TasksController (TaskService _service): ControllerBase
     //put: api/tasks/{id}/complete
 
     [HttpPut("MarkComplete/{id}")]
+    //[ProducesResponseType(typeof(BaseResponse<List<TaskItem>>), 200)]
     public IActionResult Complete(int id)
     {
         var result = _service.Complete(id);

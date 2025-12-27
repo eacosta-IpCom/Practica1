@@ -2,13 +2,37 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable> 
+    <!-- Me  va a avisar intento asignar un valor null a una variable que no puede serlo, sus opciones son enable y disable-->
+    
+    <ImplicitUsings>enable</ImplicitUsings> 
+    <!-- Implicit Usings permite que el compilador incluya automáticamente las directivas using más comunes de forma global para todo el proyecto. -->
+    <!--Con esta línea el SDK de .net detecta que estoy en una web api e importa las librerias necesarias-->
+    <!--cuando se compila, genera un archivo oculto en la carpeta obj llamado nombre.GlobalUsings.g.cs que contiene todas las importaciones-->
+    <!--sus opciones son enable y disable-->
+
+    <!--<PlatformTarget>x64</PlatformTarget>--> <!--La arquitectura del procesador-->
+    <!--Indica al compilador para que tipo de procesador debe optimizar el código binario-->
+    <!--Es de mucha ayuda cuando se usan las librerias externas (DLLs) que solo funcionan en 32 o 64 bits-->
+    <!--x64 se utiliza para procesadores de 64 bits-->
+    <!--x86 se utiliza para procesadores antiguos de 32 bits-->
+    <!--AnyCpu El programa se ajusta automaticamente a la arquitectura del equipo donde se ejecuta (Este valor viene por defecto)-->
+    <!--ARM64 se utiliza para procesadores como los de apple (M1, M2, M3) o surface pro x-->
+
+    <!--<RuntimeIdentifier>win-x64</RuntimeIdentifier>-->
+    <!--Sirve para que el compilador incluya exactamente las piezas necesarias de .net para un sistema operativo en especifico-->
+    <!--Se utiliza principalmente cuando se va a publicar un archivo .exe que no necesita que el usaurio tenga instalado .net-->
+    <!--win-x64 se utiliza para windows de 64 bits-->
+    <!--linux-arm64 se utiliza para linux en un procesador tipo móvil/raspberry Pi-->
+    <!--osx-x64 se utiliza para macOS en procesadores intel-->
   </PropertyGroup>
+
+  <!-- Como definir la arquitectura en el csproj ¿Como se puede hacer?-->
+  
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.22" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
 </Project>
