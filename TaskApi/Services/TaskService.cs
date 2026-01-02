@@ -25,7 +25,7 @@ public class TaskService
          response.Status=200;
             response.message ="Consultado con exito"; 
             response.Payload = _tasks;
-            _logger.LogInformation("Consultando la lista de tareas a las {DT}", DateTime.UtcNow.ToLongTimeString());
+            _logger.LogInformation("Consultando la lista de tareas  a las {DT}", DateTime.UtcNow.ToLongTimeString());
         return response;
         }
       catch (Exception e)
@@ -39,7 +39,7 @@ public class TaskService
     }
 
     //Crea nuevas tareas
-    public GenericResponse <TaskItem> Create(string title)
+    public GenericResponse <TaskItem> Create(string title, string comments)
     {
         GenericResponse <TaskItem> response = new ();
         try
@@ -48,6 +48,7 @@ public class TaskService
         {
             Id = _nextId++,
             Title = title,
+            Comments = comments,
             IsCompleted = false
         };
 
@@ -55,7 +56,7 @@ public class TaskService
          response.Status=200;
             response.message ="Creado con exito"; 
             response.Payload = task;
-             _logger.LogInformation("Se ha creado con exito la tarea {} a las {DT}",title, DateTime.UtcNow.ToLongTimeString());
+             _logger.LogInformation("Se ha creado con exito la tarea {} con los comentarios {} a las {DT}",title,comments, DateTime.UtcNow.ToLongTimeString());
         return response;
         }
         catch (Exception e)

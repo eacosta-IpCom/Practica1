@@ -30,7 +30,8 @@ export class FormUpdate implements OnInit {
 
   // Formulario por si quieres mostrar el título
   public formCount: FormGroup = new FormGroup({
-    title: new FormControl({ value: '', disabled: true }) // Lo ponemos deshabilitado si solo es para completar
+    title: new FormControl({ value: '', disabled: true }), // Lo ponemos deshabilitado si solo es para completar
+    coments: new FormControl ({ value: '', disabled: true })
   });
 
   constructor(

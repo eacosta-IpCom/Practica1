@@ -21,7 +21,8 @@ export class FormCreate {
 
 
     public formCount: FormGroup = new FormGroup({
-    title: new FormControl('',[Validators.required,Validators.minLength(4)])
+    title: new FormControl('',[Validators.required,Validators.minLength(4),Validators.maxLength(30)]),
+    coments: new FormControl('',[Validators.required,Validators.minLength(4),Validators.maxLength(100)])
   });
   constructor (private taskService:TaskService ){}
 
@@ -34,10 +35,12 @@ export class FormCreate {
   if (this.formCount.invalid) return;
 
   const title = this.formCount.get('title')?.value;
+  const coments = this.formCount.get('coments')?.value;
 
   try {
     // 2. IMPORTANTE: Solo llamar al servicio si no hay una petición en curso
-    await this.taskService.post(title);
+    await this.taskService.post(title, coments);
+    
 
     this.formCount.reset();
     

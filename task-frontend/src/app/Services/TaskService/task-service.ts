@@ -17,11 +17,12 @@ export class TaskService {
     return this.genericService.getQuery("tasks/GetAll",1);
   }
 
-  public post(titlee:string):Promise<IGenericResponse<ITask>>
+  public post(titlee:string, commentss:string):Promise<IGenericResponse<ITask>>
   {
     let request = 
     {
-      title: titlee
+      title: titlee,
+      coments: commentss
     }
     return this.genericService.postBody("tasks/Create",request);
   }
