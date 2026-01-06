@@ -44,7 +44,7 @@ app.MapGet("/weatherforecast", () =>
 })
 .WithName("GetWeatherForecast");
 //.WithOpenApi();
-//Prueba desde desde acmoed
+//Prueba desde desde acmoed 2
 //Prueba desde ide 2
 app.Run();
 
