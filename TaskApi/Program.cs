@@ -44,7 +44,7 @@ app.MapGet("/weatherforecast", () =>
 })
 .WithName("GetWeatherForecast");
 //.WithOpenApi();
-
+//Prueba desde ide 2
 app.Run();
 
 record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
