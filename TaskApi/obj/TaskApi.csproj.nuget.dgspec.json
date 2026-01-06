@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Eduardo Acosta Mora\\Documents\\Proyectos\\Practica 1 desde git\\Practica1\\TaskApi\\TaskApi.csproj": {}
+    "/home/acmoed/Documentos/Practica 1/Practica1/TaskApi/TaskApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Eduardo Acosta Mora\\Documents\\Proyectos\\Practica 1 desde git\\Practica1\\TaskApi\\TaskApi.csproj": {
+    "/home/acmoed/Documentos/Practica 1/Practica1/TaskApi/TaskApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Eduardo Acosta Mora\\Documents\\Proyectos\\Practica 1 desde git\\Practica1\\TaskApi\\TaskApi.csproj",
+        "projectUniqueName": "/home/acmoed/Documentos/Practica 1/Practica1/TaskApi/TaskApi.csproj",
         "projectName": "TaskApi",
-        "projectPath": "C:\\Users\\Eduardo Acosta Mora\\Documents\\Proyectos\\Practica 1 desde git\\Practica1\\TaskApi\\TaskApi.csproj",
-        "packagesPath": "C:\\Users\\Eduardo Acosta Mora\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eduardo Acosta Mora\\Documents\\Proyectos\\Practica 1 desde git\\Practica1\\TaskApi\\obj\\",
+        "projectPath": "/home/acmoed/Documentos/Practica 1/Practica1/TaskApi/TaskApi.csproj",
+        "packagesPath": "/home/acmoed/.nuget/packages/",
+        "outputPath": "/home/acmoed/Documentos/Practica 1/Practica1/TaskApi/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Eduardo Acosta Mora\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/acmoed/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,13 +32,7 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "10.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -78,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.122/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
