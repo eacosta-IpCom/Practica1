@@ -4,9 +4,9 @@ namespace TaskApi.Models
 {
     public class BaseResponse<T>
     {
-        public int Status { get; set;}
+        public int Status { get; set; }
         public string Message { get; set; } = string.Empty;
-        public T? Payload { get; set; } 
+        public T? Payload { get; set; }
 
         // Constructor para respuestas exitosas
         public BaseResponse(T payload, string message = "Operación exitosa")
@@ -23,8 +23,6 @@ namespace TaskApi.Models
             Message = message;
             Payload = default;
         }
-
-
     }
-    
+
 }

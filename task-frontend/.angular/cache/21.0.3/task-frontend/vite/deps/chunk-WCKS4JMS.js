@@ -12,17 +12,20 @@ import {
   _IdGenerator,
   _animationsDisabled,
   hasModifierKey
-} from "./chunk-EEKE2OOL.js";
+} from "./chunk-C66PNSD3.js";
+import {
+  coerceArray,
+  coerceBooleanProperty,
+  coerceCssPixelValue
+} from "./chunk-AIEYJCOW.js";
 import {
   _getEventTarget,
   _isTestEnvironment,
   normalizePassiveListenerOptions
 } from "./chunk-DQFFSLIH.js";
 import {
-  coerceArray,
-  coerceBooleanProperty,
-  coerceCssPixelValue
-} from "./chunk-AIEYJCOW.js";
+  _CdkPrivateStyleLoader
+} from "./chunk-FHSIJO76.js";
 import {
   supportsScrollBehavior
 } from "./chunk-GUGIMSVJ.js";
@@ -36,9 +39,6 @@ import {
 import {
   Platform
 } from "./chunk-S4BQODF3.js";
-import {
-  _CdkPrivateStyleLoader
-} from "./chunk-FHSIJO76.js";
 import {
   Location,
   NgClass
@@ -3901,4 +3901,4 @@ export {
   TooltipComponent,
   MatTooltipModule
 };
-//# sourceMappingURL=chunk-ZMTUAWOS.js.map
+//# sourceMappingURL=chunk-WCKS4JMS.js.map

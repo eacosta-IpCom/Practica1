@@ -8,10 +8,10 @@ import {
   trustedHTMLFromString
 } from "./chunk-NGX5KMVR.js";
 import "./chunk-U2YXT22R.js";
+import "./chunk-FHSIJO76.js";
 import {
   BidiModule
 } from "./chunk-NVCEK4EQ.js";
-import "./chunk-FHSIJO76.js";
 import "./chunk-J3K7PVPV.js";
 import "./chunk-2A4LIVQA.js";
 import {

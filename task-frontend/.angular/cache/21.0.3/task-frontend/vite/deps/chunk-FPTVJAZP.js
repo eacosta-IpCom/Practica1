@@ -3,11 +3,14 @@ import {
   _animationsDisabled,
   isFakeMousedownFromScreenReader,
   isFakeTouchstartFromScreenReader
-} from "./chunk-EEKE2OOL.js";
+} from "./chunk-C66PNSD3.js";
 import {
   _getEventTarget,
   normalizePassiveListenerOptions
 } from "./chunk-DQFFSLIH.js";
+import {
+  _CdkPrivateStyleLoader
+} from "./chunk-FHSIJO76.js";
 import {
   BidiModule
 } from "./chunk-NVCEK4EQ.js";
@@ -17,9 +20,6 @@ import {
 import {
   Platform
 } from "./chunk-S4BQODF3.js";
-import {
-  _CdkPrivateStyleLoader
-} from "./chunk-FHSIJO76.js";
 import {
   ChangeDetectionStrategy,
   Component,
@@ -1323,10 +1323,10 @@ var MatButtonModule = class _MatButtonModule {
 export {
   MatRipple,
   _StructuralStylesLoader,
-  MatRippleModule,
   MAT_BUTTON_CONFIG,
   MatIconButton,
   MatIconAnchor,
+  MatRippleModule,
   MatButton,
   MatAnchor,
   MAT_FAB_DEFAULT_OPTIONS,
@@ -1336,4 +1336,4 @@ export {
   MatMiniFabAnchor,
   MatButtonModule
 };
-//# sourceMappingURL=chunk-RQZZH2ZD.js.map
+//# sourceMappingURL=chunk-FPTVJAZP.js.map
