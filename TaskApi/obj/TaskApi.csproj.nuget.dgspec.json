@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Eduardo Acosta Mora\\Documents\\Proyectos\\Practica1\\TaskApi\\TaskApi.csproj": {}
+    "C:\\Users\\Eduardo Acosta Mora\\Documents\\Proyectos\\Practica 1 desde git\\Practica1\\TaskApi\\TaskApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Eduardo Acosta Mora\\Documents\\Proyectos\\Practica1\\TaskApi\\TaskApi.csproj": {
+    "C:\\Users\\Eduardo Acosta Mora\\Documents\\Proyectos\\Practica 1 desde git\\Practica1\\TaskApi\\TaskApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Eduardo Acosta Mora\\Documents\\Proyectos\\Practica1\\TaskApi\\TaskApi.csproj",
+        "projectUniqueName": "C:\\Users\\Eduardo Acosta Mora\\Documents\\Proyectos\\Practica 1 desde git\\Practica1\\TaskApi\\TaskApi.csproj",
         "projectName": "TaskApi",
-        "projectPath": "C:\\Users\\Eduardo Acosta Mora\\Documents\\Proyectos\\Practica1\\TaskApi\\TaskApi.csproj",
+        "projectPath": "C:\\Users\\Eduardo Acosta Mora\\Documents\\Proyectos\\Practica 1 desde git\\Practica1\\TaskApi\\TaskApi.csproj",
         "packagesPath": "C:\\Users\\Eduardo Acosta Mora\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eduardo Acosta Mora\\Documents\\Proyectos\\Practica1\\TaskApi\\obj\\",
+        "outputPath": "C:\\Users\\Eduardo Acosta Mora\\Documents\\Proyectos\\Practica 1 desde git\\Practica1\\TaskApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
